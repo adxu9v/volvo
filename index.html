@@ -7,7 +7,7 @@
     <title>볼보자동차코리아 | Volvo Cars</title>
 	 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
     <style>
-*{margin: 0; padding: 0; list-style: none; font-family: 'NanumSquare', sans-serif;}
+*{margin: 0; padding: 0; list-style: none; font-family: 'NanumSquare', sans-serif; text-decoration: none;}
 body,html {height: 100%;}
 #main {width: 100%; height: 100%; background: url(bg_xc40.jpg) center no-repeat; background-size: cover;}
 header { width: 1200px; height: 60px;  margin: auto; }
@@ -18,53 +18,67 @@ header { width: 1200px; height: 60px;  margin: auto; }
 #main_textbox>h4 { font-size: 40px; color: #fff; font-weight: 100; margin-top: 10px;}
 #section1 { width: 1200px; margin: auto; margin-top: 100px;}
 #section1>h2 { text-align: center;}
-#section1>p { text-align: center; margin-top: 30px;}
+#section1>p { text-align: center; margin-top: 30px; color: #aaa;}
 #section1_box1 { width: 1200px; height: 675px;margin-top: 40px; background: url(sec1_vod1.jpg); 
 position: relative;   }
 #section1_box2 { width: 1200px; height: 220px; background:url(sec1_banner1.jpg); padding: 40px;   
 box-sizing: border-box;}
-.play_btn { position: absolute;  left: 0;  right: 0; top: 0; bottom: 0; margin: auto;	 }
+.play_btn { position: absolute;  left: 0;  right: 0; top: 0; bottom: 0; margin: auto; cursor: pointer;}
 #section1_box2>p { font-size: 35px; color: #fff; font-weight: 100;  }
-#section1_box2>button { margin-top: 15px; }
+#section1_box2>button { margin-top: 15px;}
+#section1_box2>img{transition: 0.2s; margin-top: 30px;}
+#section1_box2>img:hover{background-color: #0A416E; cursor: pointer;}
+.section2_tit{width: 370px; height: 66px; background-color: #fff; line-height: 66px; margin: auto; margin-top: 50px; border: 1px solid #0A416E; transition: 0.2s;}
+.section2_tit>h3{color:#0A416E; transition: 0.2s; text-align: center;}
+.section2_tit:hover{background-color: #0A416E; cursor: pointer;}
+.section2_tit>h3:hover{color: #fff;}
 
 
 
-#section2 { width: 1200px; margin: auto; margin-top: 100px; text-align: center; }
-#section2>h2 { }
-#section2>p { text-align: center; }
-#section2>ul { width: 1200px; height: 570px; background-color: #fc0; }
-#section2>ul>li { float: left; position: relative;  }
-#section2>ul>li>img { vertical-align: top; }
-#section2>ul>li>h4 { position: absolute; bottom: 60px; left: 20px; color: #fff; font-size: 14px; }
-#section2>ul>li>h5 { position: absolute; bottom: 35px; left: 20px; color: #fff; font-size: 20px; }
+#section2 { width: 1200px; margin: auto; margin-top: 100px; text-align: center;}
+#section2>p { text-align: center;  margin-top: 30px; color: #aaa;}
+#section2>ul { width: 1200px; height: 570px; background-color: #fc0; margin-top: 40px;}
+#section2>ul:hover{cursor: pointer;}
+#section2>ul>li { float: left; position: relative; overflow: hidden;}
+#section2>ul>li>div:hover img{transform:scale(1.1);}
+#section2>ul>li>div>img {vertical-align: top; transition: 0.3s;}
+#section2>ul>li>div>h4 { position: absolute; bottom: 60px; left: 20px; color: #fff; font-size: 14px; }
+#section2>ul>li>div>h5 { position: absolute; bottom: 35px; left: 20px; color: #fff; font-size: 20px; }
 #section2_btn { margin-top: 50px;  }
+#section2_btn:hover{cursor: pointer;}
 #section3{width: 1200px; margin: auto; margin-top: 100px; text-align: center; position: relative;}
 #section3>p{font-size: 20px; margin-top: 10px; color: #aaa;}
 #section3_box1{margin-top: 50px;}
 #section3_box1>img:last-child{position: absolute; z-index: 3; right: 0; left: 0; top: 0; bottom: 0; margin: auto;}
-#section4{width: 1200px; margin: auto; margin-top: 100px; text-align: center;}
+#section4{width: 100%; height: 700px; margin: auto; margin-top: 100px; text-align: center; background-color: #666;}
 #section4>p{margin-top: 30px; font-size: 30px; font-weight: 100;}
-#section4>ul{width: 100%; overflow: hidden; margin-top: 30px;}
-#section4>ul>li{width: 380px; height: 380px; float: left; }
+#section4>ul{width: 100%; overflow: hidden; margin: auto;}
+#section4>ul>li{width: 380px; height: 380px; display: inline-block;}
 #section4>ul>li>img{width: 100%; vertical-align: top;}
 #section4>ul>li:nth-child(2){margin: 0 30px;}
 #section4>ul>li>h4{text-decoration: line-through; margin-top: 5px; font-size: 17px;}
 #section4>ul>li>h5{text-decoration: underline; margin-top: 3px; font-weight: 700; font-size: 18px;}
 #section4>ul>li>h6{font-style: italic; margin-top: 3px; font-size: 12px;}
 #sect4_btn{margin-top: 40px; opacity: 0.5;}
+#sect4_btn:hover{cursor: pointer;}
 #section5{width: 1200px; margin: auto; margin-top: 100px; text-align : center; }
-#section5>h2{}
 #section5>p{ margin-top: 30px; font-size: 25px; color: #aaa; font-weight: 400; margin-bottom: 50px;}
 #section5_box1{width: 1200px; height: 675px; background: url(sec3_img5.jpg) center no-repeat; background-size: cover; margin-top: 30px; position: relative;}
 #section5_leftbtn{position: absolute; top: 0; bottom: 0; margin: auto;left: 10px;}
 #section5_rightbtn{position: absolute; right: 10px; top: 0; bottom: 0; margin: auto;}
 #section5_leftbtn,#section5_rightbtn{opacity: 0.5;}
-footer{width: 100%; height: 150px; background-color: #ccc;}
+#section_btn{width: 660px; height: 60px; background-color: #fff; border: 1px solid #000; ;line-height: 60px; margin: 100px auto 100px; transition: 0.3s;}
+#section_btn>h3{color: #0A416E; }
+#section_btn:hover{border: 1px solid #000; cursor: pointer; background-color: #0A416E;}
+#section_btn:hover h3{color: #fff;}
+footer{width: 100%; height: 150px; background-color: #fff; color: #aaa; border-top: 1px solid #ddd;}
 #footer_box{width: 1200px; height: 150px; margin: auto;}
-#footer_text{width: 600px; height: 70px; float: left; margin-top: 60px; margin-left: 40px;}
-#footer_text>p{font-weight: 700;}
-#footer_icon{height: 70px; float: right; margin-top: 60px; }
+#footer_text{width: 600px; height: 70px; float: left; margin-top: 40px;}
+#footer_text>p{font-weight: 400; font-size: 12px;}
+#footer_text>h6{margin: 10px 0;}
+#footer_icon{height: 70px; float: right; margin-top: 60px;}
 #footer_icon>li{float: left; margin:0px 5px;}
+#footer_icon>li:hover{cursor: pointer;}
 /* float는 margin-top으로 밖에 상하정렬이 안된다 */
 	</style>
 	</head>
@@ -93,25 +107,26 @@ footer{width: 100%; height: 150px; background-color: #ccc;}
 		<p>다른 것으로 대체할 수 없는 가져야 할 것만 가질 것은 무엇인가요 <br>나에게 있어 독보적인 존재감을 사진으로 공유해주세요.</p>
 		<img src="sec1_btn.png" alt="">
 	</div>	  
+	<div class="section2_tit"><h3>XC40 홈페이지 바로가기</h3></div>
 </div>
 <!--  -->
 <div id="section2">
-	<h2><img src="" alt=""></h2>
+	<h2><img src="sec2_tit.png" alt=""></h2>
 	<p>당신이 필요한 것만 모두 갖춘 SUV</p>
 	<ul>
-		<li><img src="sec2_img1.jpg" alt=""><h4>DESIGN</h4><h5>도시형 SUV</h5></li>
-		<li><img src="sec2_img2.jpg" alt=""><h4>VERSATILTY</h4><h5>편안한 일상을 누리는 공간</h5></li>
-		<li><img src="sec2_img3.jpg" alt=""><h4>SAFETY</h4><h5>운전자를 보호하는 기술</h5></li>
-		<li><img src="sec2_img4.jpg" alt=""><h4>TECH</h4><h5>독창적인 솔루션</h5></li>
-		<li><img src="sec2_img5.jpg" alt=""><h4>DRIVING</h4><h5>언제나 어디든, 원하는 대로</h5></li>
+		<li><div><img src="sec2_img1.jpg" alt=""><h4>DESIGN</h4><h5>도시형 SUV</h5></div></li>
+		<li><div><img src="sec2_img2.jpg" alt=""><h4>VERSATILTY</h4><h5>편안한 일상을 누리는 공간</h5></div></li>
+		<li><div><img src="sec2_img3.jpg" alt=""><h4>SAFETY</h4><h5>운전자를 보호하는 기술</h5></div></li>
+		<li><div><img src="sec2_img4.jpg" alt=""><h4>TECH</h4><h5>독창적인 솔루션</h5></div></li>
+		<li><div><img src="sec2_img5.jpg" alt=""><h4>DRIVING</h4><h5>언제나 어디든, 원하는 대로</h5></div></li>
 	</ul>
-	<img src="sec2_btn.png" alt="" id="section2_btn">	
+	<div class="section2_tit"><h3>XC40 홈페이지 바로가기</h3></div>
 </div>
 <!--  -->
 <div id="section3">
 	<h2><img src="sec3_tit.png" alt=""></h2>
 	<p>가져야 할 것만 가질 것</p>
-	<div id="section3_box1"><img src="sec4_vod1.jpg" alt=""><img src="paly.png" alt=""></div>
+	<div id="section3_box1"><img src="sec4_vod1.jpg" alt=""><img src="paly.png" alt="" class="play_btn"></div>
 </div>
 <!--  -->
 <div id="section4">
@@ -136,7 +151,8 @@ footer{width: 100%; height: 150px; background-color: #ccc;}
 			<h6>Explore trim</h6>
 		</li>
 	</ul>
-	<img src="sec5_btn.png" alt="" id="sect4_btn">
+	<div id="section_btn"><h3>XC40 홈페이지 바로가기</h3></div>
+	<!-- <img src="sec5_btn.png" alt="" id="sect4_btn"> -->
 </div>
 <div id="section5">
 	<h2>
@@ -151,7 +167,7 @@ footer{width: 100%; height: 150px; background-color: #ccc;}
 <footer>
 	<div id="footer_box">
 		<div id="footer_text">
-			<h5>문의 (볼보자동차코리아 고객센터)</h5>
+			<h4>문의 (볼보자동차코리아 고객센터)</h4>
 			<h6>1588-1777</h6>
 			<p>Copyright © 2018 Volvo Car Corporation (또는 계열사 또는 라이센스 제공자)</p>
 		</div>
