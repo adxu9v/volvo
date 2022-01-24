@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>볼보자동차코리아 | Volvo Cars</title>
 	 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+	 <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+	 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <style>
 *{margin: 0; padding: 0; list-style: none; font-family: 'NanumSquare', sans-serif; text-decoration: none;}
+#top_btn{position: fixed; width: 70px; height: 70px; border-radius: 70px; bottom: 30px; right: 30px; background-color: #000; opacity: 0.5; color: #fff; text-align: center; line-height: 70px; cursor: pointer;}
 body,html {height: 100%;}
-#main {width: 100%; height: 100%; background: url(bg_xc40.jpg) center no-repeat; background-size: cover;}
-header { width: 1200px; height: 60px;  margin: auto; }
+#main {width: 100%; height: 100%; background: url(bg_xc40.jpg) center no-repeat; background-size: cover; overflow: hidden;}
+header { width: 100%; height: 80px; left: 0; right: 0; margin: auto; position: fixed; background-color:rgba(0, 0, 0, 0.5); z-index: 999;}
+#header_box{width: 1200px; margin: auto; background-color: green; z-index: 1000; margin-top: 10px;}
 #logo { width: 54px; height: 54px; float: left; margin-top: 3px; } /* 기본으로 왼쪽에 있어도 오른쪽공간을 비워주기 위해 fl:l 를 할당*/
 #menu { height: 60px; float:right; }
 #menu>li { float: left; margin-left: 30px; line-height: 60px; color: #fff; }
@@ -50,15 +54,17 @@ box-sizing: border-box;}
 #section3>p{font-size: 20px; margin-top: 10px; color: #aaa;}
 #section3_box1{margin-top: 50px;}
 #section3_box1>img:last-child{position: absolute; z-index: 3; right: 0; left: 0; top: 0; bottom: 0; margin: auto;}
-#section4{width: 100%; height: 700px; margin: auto; margin-top: 100px; text-align: center; background-color: #666;}
+#section4{width: 100%; height: 700px; margin: auto; margin-top: 100px; text-align: center; background-color: #666; overflow: hidden;}
 #section4>p{margin-top: 30px; font-size: 30px; font-weight: 100;}
-#section4>ul{width: 100%; overflow: hidden; margin: auto;}
+#section4>ul{width: 100%; margin: auto; margin-top: 20px;}
 #section4>ul>li{width: 380px; height: 380px; display: inline-block;}
-#section4>ul>li>img{width: 100%; vertical-align: top;}
+#section4>ul>li>img{width: 100%; vertical-align: top; border-radius: 5px;}
 #section4>ul>li:nth-child(2){margin: 0 30px;}
-#section4>ul>li>h4{text-decoration: line-through; margin-top: 5px; font-size: 17px;}
-#section4>ul>li>h5{text-decoration: underline; margin-top: 3px; font-weight: 700; font-size: 18px;}
-#section4>ul>li>h6{font-style: italic; margin-top: 3px; font-size: 12px;}
+#section4>ul>li>h4{margin-top: 30px; font-size: 25px; text-align: left;}
+#section4>ul>li>h5{margin-top: 10px; font-weight: 100; font-size: 18px; text-align: left;}
+#section4>ul>li>h5>span{font-weight: 700;}
+#section4>ul>li>a{margin-top: 20px; font-size: 20px; border: 2.5px solid #000; border-radius: 5px; padding: 10px; display: block; transition: 0.3s;}
+#section4>ul>li>a:hover{cursor: pointer; color: #aaa; background: #000;}
 #sect4_btn{margin-top: 40px; opacity: 0.5;}
 #sect4_btn:hover{cursor: pointer;}
 #section5{width: 1200px; margin: auto; margin-top: 100px; text-align : center; }
@@ -83,14 +89,15 @@ footer{width: 100%; height: 150px; background-color: #fff; color: #aaa; border-t
 	</style>
 	</head>
 	<body>
+		<div id="top_btn"><h2>TOP</h2></div>
     <div id="main">
 		<header>
-			<img src="logo.png" alt="" id="logo"> 
-			<ul id="menu">
-				<li>xc40</li>
-				<li>Event</li>
-				<li>Meet XCeptionals</li>
-			</ul>
+			<div id="header_box"><img src="logo.png" alt="" id="logo"> 
+				<ul id="menu">
+					<li>xc40</li>
+					<li>Event</li>
+					<li>Meet XCeptionals</li>
+				</ul></div>
 		</header>
 		<div id="main_textbox">
 			<h2><img src="xc40_stit.png" alt=""></h2>
@@ -130,29 +137,24 @@ footer{width: 100%; height: 150px; background-color: #fff; color: #aaa; border-t
 </div>
 <!--  -->
 <div id="section4">
-	<h2>
-		<img src="sec5_tit.png" alt="">
-	</h2>
 	<p>XC40 트림 옵션</p>
 	<ul>
 		<li><img src="sec5_img1.jpg" alt="">
-			<h4>XC40 Momentum</h4>
-			<h5>보다 멋진 도시 생활</h5>
-			<h6>Explore trim</h6>
+			<h4>Momentum</h4>
+			<h5>소비자 판매가격 <span>₩46,700,000</span></h5>
+			<a>Build Your Own</a>
 		</li>
 		<li><img src="sec5_img2.jpg" alt="">
-			<h4>XC40 Inscription</h4>
-			<h5>진보적인 스칸디나비아 럭셔리 출시 예정</h5>
-			<h6>Explore trim</h6>
+			<h4>Inscription</h4>
+			<h5>소비자 판매가격 <span>₩51,300,000</span></h5>
+			<a>Build Your Own</a>
 		</li>
 		<li><img src="sec5_img3.jpg" alt="">
-			<h4>XC40 R-Design</h4>
-			<h5>역동적인 대비와 자신만만한 존재감</h5>
-			<h6>Explore trim</h6>
+			<h4>R-Design</h4>
+			<h5>소비자 판매가격 <span>₩46,700,000</span></h5>
+			<a>Build Your Own</a>
 		</li>
 	</ul>
-	<div id="section_btn"><h3>XC40 홈페이지 바로가기</h3></div>
-	<!-- <img src="sec5_btn.png" alt="" id="sect4_btn"> -->
 </div>
 <div id="section5">
 	<h2>
@@ -178,5 +180,17 @@ footer{width: 100%; height: 150px; background-color: #fff; color: #aaa; border-t
 		</ul>
 	</div>
 </footer>
+<script>
+	var top = document.getElementById("top_btn")
+		top.addEventListener('click',function(e){
+			e.preventDefault();
+			window.scrollTo({top:0, behavior:"smooth"});
+		})
+		$(window).scroll(function(){
+			if($(this).scrollTop()>200){$("#top_btn").fadeIn();}
+		else{$("#top_btn").fadeOut();
+		}
+			});
+</script>
 </body>
 </html>
